@@ -381,7 +381,7 @@ textarea:focus {
   z-index: 1;
 }
 
-fa-spinner {
+.fa-spinner {
   animation: spinner 750ms infinite linear;
 }
 
