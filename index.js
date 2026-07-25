@@ -4,21 +4,22 @@
 
 function contact(event) {
   event.preventDefault();
-  //emailjs
-  //.sendForm(
-  //  'service_coaksme',
-    //'template_q39byrs',
-    //event.target,
- //'bhUr8uq6lLF4dpzuV'
-  //).then(() => {
-   // console.log('this worded1')
-  //})
 const loading = document.querySelector('.modal__overlay--loading')
 const success = document.querySelector('.modal__overlay--success') 
 loading.classList += " modal__overlay--visible";
-setTimeout(() => {
-  loading.classList.remove("modal__overlay--visible");
+emailjs
+  .sendForm(
+  'service_coaksme',
+  'template_q39byrs',
+  event.target,
+  'bhUr8uq6lLF4dpzuV'
+ ).then(() => {
+loading.classList.remove("modal__overlay--visible");
 success.classList += " modal__overlay--visible";
-  console.log('it worked 1')
-   }, 1000); 
+ }).catch(() => {
+  loading.classList.remove("modal__overlay--visible");
+alert(
+  "The email service is temporarily unavailable. Please contact me directly on nickap2301@gmail.com"
+);
+})
 }
