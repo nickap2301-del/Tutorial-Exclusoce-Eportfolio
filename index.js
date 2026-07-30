@@ -23,3 +23,12 @@ alert(
 );
 })
 }
+let isModalOpen = false;
+function toggleModal() {
+  
+  if (isModalOpen) {
+return document.body.classList.remove("model--open");
+  }
+  isModalOpen = !isModalOpen;
+document.body.classList += " modal--open";
+}

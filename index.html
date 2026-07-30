@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<script src="index.js"></script>
+    <script src="index.js"></script>
 
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 <script type="text/javascript">
    (function(){
-      emailjs.init({publicKey: "bhUr8uq6lLF4dpzuV",});})();
-</script>
+      emailjs.init({
+        publicKey: "bhUr8uq6lLF4dpzuV",
+      });
+   })();
+</script> 
+
   </head>
 
   <body>
@@ -24,27 +32,38 @@
           <img
             id="personal-logo"
             src="./assets/NP logo white with black backaround.jpeg"
-            alt="">
+            alt=""/>
         </figure>
         <ul class="nav__link--list">
           <li class="nav__link">
-            <a href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black">
-              About Me</a>
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              About Me</a
+            >
           </li>
           <li class="nav__link">
-            <a href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black">
-              Projects</a>
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              Projects</a
+            >
           </li>
           <li class="nav__link">
-            <a href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black">
-              Contact</a>
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              Contact</a
+            >
           </li>
           <li class="nav__link click">
-            <a href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
               <i class="fa-solid fa-circle-half-stroke"></i>
             </a>
           </li>
@@ -57,102 +76,124 @@
           <p class="header__para">
             I'm a <b class="navy">Frontend Software Engineer</b>with a strong
             passion for experiences.
-            <br>
+            <br />
             Here's a bit more <b class="navy">about me</b>.
           </p>
           <div class="social__list">
             <a
               href="https://www.linkedin.com"
               target="_blank"
-              class="social__link click">
+              class="social__link click"
+            >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
             <a
               href="https://github.com/"
               target="_blank"
-              class="social__link click">
+              class="social__link click"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
-         <a href="./assets/Nick Pena Resumes.pdf"
-         target="_blank" class="social__link click">
-         <i class="fa-regular fa-file-pdf"> </i>
+            <a
+              href="./assets/Nick Pena Resumes.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-regular fa-file-pdf"> </i>
             </a>
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fas fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
-<div class="modal">
-  <div class="modal__half modal__about">
-    <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
-  <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer </h4>
-<p class="modal__para">
-  I'm a <b class="navy">Frontend Software Engineer </b>with 
-  <br>
-  I currently beginner who is currently 
-  learning frontend development. 
-  I work with <b class="navy"> HTML, CSS, JavaScript,</b> and<b class="navy"> React,</b> and
-  I'm always looking to improve my skills.
-</p>
-<div class="modal__languages">
-  <figure class="modal__language">
-    <img class="modal__language--img" src="./assets/html.svg" alt="">
- <span class="language__name">HTML</span>
-  </figure>
-<figure class="modal__language">
-    <img class="modal__language--img" src="./assets/css.svg" alt="">
- <span class="language__name">CSS</span> 
-  </figure>
-  <figure class="modal__language">
-    <img class="modal__language--img" src="./assets/javascript.svg" alt="">
-  <span class="language__name">JavaScript</span>
-  </figure>
-  <figure class="modal__language">
-    <img class="modal__language--img" src="./assets/react.svg" alt="">
- <span class="language__name">React</span>
-  </figure>
-</div>
-</div>
- 
-  <div class="modal__half modal__contact">
-    <h3 class="moda__title modal__title--contact">
-      Let's have a chat!</h3>
-    <h3 class="modal__sub-title modal__sub-title--contact">
-      I'm currently open to new opportunities.
-    </h3>
-    <form id="contact__form" onsubmit="contact(event)">
-      <div class="form__item">
-        <label class="form__item--label">Name</label>
-        <input class="input" name="user_name" type="text">
-      </div> 
-      <div class="form__item">
-        <label class="form__item--label">Email</label>
-        <input class="input" name="user_email" type="email">
-      </div> 
-      <div class="form__item">
-        <label class="form__item--label">Message</label>
-        <textarea class="input" name="message" type="text"></textarea>
-      </div> 
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a <b class="navy">Frontend Software Engineer </b>with
+            <br />
+            I currently beginner who is currently learning frontend development.
+            I work with <b class="navy"> HTML, CSS, JavaScript,</b> and<b
+              class="navy"
+            >
+              React,</b
+            >
+            and I'm always looking to improve my skills.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/html.svg"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/css.svg" alt="" />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/javascript.svg"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/react.svg"
+                alt=""
+              />
+              <span class="language__name">React</span>
+            </figure>
+          </div>
+        </div>
 
-<button id="contact__submit" class="form__submit">
-Send it my way  
-</button>
-      </form>
-<div class="modal__overlay modal__overlay--loading">
-<i class="fas fa-spinner"></i>
-</div>
-<div class="modal__overlay modal__overlay--success">
-Thanks for the message! Looking forward to speaking to you soon.
-</div>
-  </div>
-<i class="fas fa-times modal__exit click"></i>
+        <div class="modal__half modal__contact">
+          <h3 class="moda__title modal__title--contact">Let's have a chat!</h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities.
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text"></textarea>
+            </div>
 
-</div>
-  </section>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon.
+          </div>
+        </div>
+        <i class="fas fa-times modal__exit click"></i>
+      </div>
+    </section>
     <section id="projects">
       <div class="container">
         <div class="row">
@@ -161,35 +202,35 @@ Thanks for the message! Looking forward to speaking to you soon.
           </h1>
           <ul class="projects__list">
             <li class="project">
-            <div class="project__wrapper">
-<img src="./assets/blinker mockup.png"
-     class="project__img" alt="">
-            
-     <div class="project__wrapper--bg"></div>    
-            
-   <div class="project__description">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
 
-    <h3 class="project__description--title">
-      Car Sales Projects
-      </h3>
-      <h4 class="project__description--sub-title">
-      Html, CSS, JavaScript,
-      </h4>
-<p class="project__description--para">
-    Lorem ipsum dolor sit amet, consectetur adipiscing luctus
-    faucibus augue. Fusce volutpat iaculis dapi adipiscing
-    luctus faucibus augue. Fusece volutpat iaculis dapi
-    adipiscing elit. Maecenas id eleifend libero.
-  </p>
-<div class="project__description--links">
-                    
-<a href="#" class="project__description--link">
-<i class="fab fa-github"></i>
-</a>
+                <div class="project__wrapper--bg"></div>
 
-<a href="#" class="project__description--link">
- <i class="fas fa-link"></i>
-                    
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Projects
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript,
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing luctus
+                    faucibus augue. Fusce volutpat iaculis dapi adipiscing
+                    luctus faucibus augue. Fusece volutpat iaculis dapi
+                    adipiscing elit. Maecenas id eleifend libero.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
                     </a>
                   </div>
                 </div>
@@ -200,42 +241,44 @@ Thanks for the message! Looking forward to speaking to you soon.
       </div>
     </section>
     <footer>
-          <div class="container">
-            <div class="row footer__row">
-            <figure>
-            <img  class="footer__logo--img" 
-            src="./assets/NP logo white with black backaround.jpeg" alt="">
-            </figure>
-            <div class="footer__social--list">
-              <a href="#" class="
-              footer__social--link
-              link__hover-effect
-              link__hover-effect--white">
-                  GitHub
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img
+              class="footer__logo--img"
+              src="./assets/NP logo white with black backaround.jpeg"
+              alt=""
+            />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              GitHub
             </a>
-             <a href="#" class="
-              footer__social--link
-              link__hover-effect
-              link__hover-effect--white">
-                  Linked-In
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Linked-In
             </a>
-            <a href="#" class="
-              footer__social--link
-              link__hover-effect
-              link__hover-effect--white">
-                Email
-                          
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Email
             </a>
-             <a href="#" class="
-              footer__social--link
-              link__hover-effect
-              link__hover-effect--white">
-                Resume
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Resume
             </a>
-            </div>
-       <div class="footer__copyright">Copyright © Nicholas Pena</div>
           </div>
-          </div>
+          <div class="footer__copyright">Copyright © Nicholas Pena</div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
