@@ -260,6 +260,7 @@ textarea:focus {
   overflow: hidden;
   display: flex;
   visibility: hidden;
+  transition: all 300ms ease;
 }
 
 .modal--open .modal{
@@ -276,9 +277,12 @@ textarea:focus {
   justify-content: center;
   position: relative;
 }
-
+.modal--open .modal__half {
+  transform: translateX(0);
+}
 .modal__about {
   background-color: rgb(245, 245, 245);
+  transform: translateX(-200%);
 }
 
 .modal__languages {
@@ -319,6 +323,7 @@ textarea:focus {
 .modal__contact {
   background-color: #242424;
   color: white;
+  transform: translateX(200%)
 }
 
 .modal__title {
@@ -370,6 +375,7 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   z-index: -1;
+  display: none;
 }
 .modal__overlay--loading {
   background-color:#000000;
@@ -384,6 +390,9 @@ textarea:focus {
 }
 .modal__overlay--visible {
   z-index: 1;
+  display: flex;
+  justify-content: center;
+align-items: center;
 }
 
 .fa-spinner {
